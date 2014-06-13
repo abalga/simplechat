@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<TCP bind_addr="localhost" bind_port="7833" />
+<TCPPING timeout="3000"
+    initial_hosts="localhost[7831],localhost[7832],localhost[7833]"
+    port_range="1"/>
+<VERIFY_SUSPECT timeout="1500"  />
+<pbcast.NAKACK use_mcast_xmit="false"
+    retransmit_timeout="300,600,1200,2400,4800"
+    discard_delivered_msgs="true"/>
+<pbcast.STABLE stability_delay="1000" desired_avg_gossip="50000" max_bytes="400000"/>
+<pbcast.GMS print_local_addr="true" join_timeout="5000" view_bundling="true"/>
+<pbcast.STATE_TRANSFER/>
+</config>
